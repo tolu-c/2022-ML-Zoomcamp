@@ -7,7 +7,9 @@
     - [1.3 Supervised ML](#13-supervised-ml)
     - [1.4 CRISP-DM ML Process](#14-crisp-dm-ml-process)
       - [Steps](#steps)
-    - [1.5 Model Selection](#15-model-selection)
+    - [1.5 Modelling Step: Model Selection](#15-modelling-step-model-selection)
+      - [Selecting the best model](#selecting-the-best-model)
+      - [Multiple comparisons problem](#multiple-comparisons-problem)
 
 ## Notes
 
@@ -79,4 +81,35 @@ It's a methodology for organizing ML projects
    > *Did we solve/measure the right thing?*
 6. **Evaluation + Deployment**: online evaluation(live testing)
 
-### 1.5 Model Selection
+### 1.5 Modelling Step: Model Selection
+
+Models to choose from:
+
+- Logistic Regression
+- Decision Tree
+- Neural Network
+- or many others
+
+#### Selecting the best model
+
+you divide your data set into two:
+
+- Train data (about 8% of the data) *y1*
+- Validated data (about 20% of the data, presumed data of the future) *y2*
+
+train both and compare
+> repeat for the other models, compare and select the best model
+
+#### Multiple comparisons problem
+
+> A model might be **lucky** but not **accurate**.
+
+How to avoid that? split the data into three:
+
+- Train data
+- validation data
+- test data
+
+> hence, perform multiple data validation to avoid being lucky.
+>
+> SPLIT => TRAIN => VALIDATE => SELECT => TEST => CHECK
